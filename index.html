@@ -209,25 +209,25 @@
               </div>
             </div>
           </div>
-          <form class="contact-form" action="mailto:tomasderese49@gmail.com"
-          method="post"
-          enctype="text/plain">
+          <form action="https://formsubmit.co/tomasderese49@gmail.com" method="POST">
             <div class="form-group">
-              <input type="text" placeholder="Your Name" required />
-            </div>
-            <div
-              class="form-group"
-            >
-              <input type="email" placeholder="Your Email" required />
+              <input type="text" name="name" placeholder="Your Name" required>
             </div>
             <div class="form-group">
-              <input type="text" placeholder="Subject" />
+              <input type="email" name="email" placeholder="Your Email" required>
             </div>
             <div class="form-group">
-              <textarea placeholder="Enter your message here..." required></textarea>
+              <input type="text" name="subject" placeholder="Subject">
             </div>
+            <div class="form-group">
+              <textarea name="message" placeholder="Enter your message here..." required></textarea>
+            </div>
+            <!-- Optional: Add hidden fields for more control -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
             <button type="submit" class="btn primary-btn">Send Message</button>
           </form>
+          
         </div>
       </div>
     </section>
