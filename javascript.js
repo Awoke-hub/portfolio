@@ -84,4 +84,16 @@ document.addEventListener('DOMContentLoaded', function() {
     
     window.addEventListener('scroll', animateElements);
     window.addEventListener('load', animateElements);
+document.getElementById('sendEmailBtn').addEventListener('click', function(e) {
+  e.preventDefault();
+  
+  const name = encodeURIComponent(document.getElementById('userName').value);
+  const email = encodeURIComponent(document.getElementById('userEmail').value);
+  const subject = encodeURIComponent(document.getElementById('emailSubject').value);
+  const message = encodeURIComponent(document.getElementById('userMessage').value);
+  
+  const mailtoLink = `mailto:tomasderese49@gmail.com?subject=${subject}&body=Name: ${name}%0AEmail: ${email}%0A%0AMessage:%0A${message}`;
+  
+  window.location.href = mailtoLink;
+});
 });
